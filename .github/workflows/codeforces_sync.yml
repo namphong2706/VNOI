@@ -1,0 +1,25 @@
+name: Codeforces Auto Sync
+
+on:
+  schedule:
+    # Chạy tự động lúc 00:00 UTC mỗi ngày
+    - cron: '0 0 * * *'
+  workflow_dispatch: # Cho phép bạn bấm nút chạy thủ công bất cứ lúc nào
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Sync Codeforces Submissions
+        uses: xyping/codeforces-hub@v1.0
+        with:
+          CF_HANDLE: 'NHAP_HANDLE_CODEFORCES_CUAR_BAN'
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
