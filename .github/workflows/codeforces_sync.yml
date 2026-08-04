@@ -2,9 +2,8 @@ name: Codeforces Auto Sync
 
 on:
   schedule:
-    # Chạy tự động lúc 00:00 UTC mỗi ngày
     - cron: '0 0 * * *'
-  workflow_dispatch: # Cho phép bạn bấm nút chạy thủ công bất cứ lúc nào
+  workflow_dispatch:
 
 jobs:
   sync:
@@ -16,10 +15,18 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.x'
+          python-version: '3.10'
 
-      - name: Sync Codeforces Submissions
-        uses: xyping/codeforces-hub@v1.0
-        with:
-          CF_HANDLE: 'namphong2706'
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Run Sync Script
+        run: python sync_cf.py
+
+      - name: Commit & Push changes
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git add .
+          git commit -m "Auto sync Codeforces submissions" || exit 0
+          git push
