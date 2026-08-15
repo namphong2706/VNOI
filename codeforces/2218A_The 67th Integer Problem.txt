@@ -1,0 +1,2 @@
+// Bài: 2218A - The 67th Integer Problem
+// Link: https://codeforces.com/contest/2218/submission/387015541
