@@ -1,0 +1,2 @@
+// Bài: 2259A - Moo Language School
+// Link: https://codeforces.com/contest/2259/submission/389502540

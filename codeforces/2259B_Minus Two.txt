@@ -1,0 +1,2 @@
+// Bài: 2259B - Minus Two
+// Link: https://codeforces.com/contest/2259/submission/389519686
