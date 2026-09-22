@@ -1,0 +1,2 @@
+// Bài: 2266D - Falling Concrete
+// Link: https://codeforces.com/contest/2266/submission/391519798

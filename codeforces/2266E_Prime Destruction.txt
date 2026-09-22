@@ -1,0 +1,2 @@
+// Bài: 2266E - Prime Destruction
+// Link: https://codeforces.com/contest/2266/submission/391528364
