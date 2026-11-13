@@ -1,0 +1,2 @@
+// Bài: 2290B - Stubborn Pen
+// Link: https://codeforces.com/contest/2290/submission/398336908

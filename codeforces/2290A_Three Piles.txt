@@ -1,0 +1,2 @@
+// Bài: 2290A - Three Piles
+// Link: https://codeforces.com/contest/2290/submission/398314629
